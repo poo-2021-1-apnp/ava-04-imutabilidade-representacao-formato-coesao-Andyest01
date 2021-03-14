@@ -33,14 +33,18 @@ public final class TimeManager {
     return s % TimeConstants.MINUTES.seconds;
   }
 
+  public static double secondsToDoubleHours (int s) {
+    return (s * INVERSE_HOUR);
+  }
+
   public static int checkTimeOverflow(int h, int m, int s) {
     int seconds = hoursToSeconds(h) + minutesToSeconds(m) + s;
 
     if (Math.abs(seconds) >= TimeConstants.DAYS.seconds)
       seconds = seconds % TimeConstants.DAYS.seconds;
-    /*
-     * if (seconds < 0) seconds = TimeConstants.DAYS.seconds - seconds;
-     essa pare ta errada */
+
+      if (seconds < 0) seconds = TimeConstants.DAYS.seconds + seconds;
+
     return seconds;
 
   }

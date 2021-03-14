@@ -14,7 +14,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "boundary",
   "editor.renderControlCharacters": true,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "window.zoomLevel": 0,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons",
